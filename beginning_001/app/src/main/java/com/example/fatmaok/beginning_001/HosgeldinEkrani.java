@@ -1,6 +1,7 @@
 package com.example.fatmaok.beginning_001;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.content.Intent;
 
@@ -9,10 +10,16 @@ import android.content.Intent;
  */
 
 public class HosgeldinEkrani extends Activity {
+
+
+    MediaPlayer music;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hosgeldin);
+
+        music=MediaPlayer.create(HosgeldinEkrani.this,R.raw.acilis);
+        music.start();
 
         Thread zamanlayici=new Thread(){
             public void run(){
@@ -21,11 +28,17 @@ public class HosgeldinEkrani extends Activity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }finally {
-                    Intent mainicagir=new Intent("android.intent.action.MAINACTIVITY");
+                    Intent mainicagir=new Intent("android.intent.action.MENU");
                     startActivity(mainicagir);
                 }
             }
         };
         zamanlayici.start();
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        music.release();
+        finish();
     }
 }
