@@ -12,7 +12,7 @@ import android.content.Intent;
  */
 
 public class Menu extends ListActivity {
-    String siniflarim[]={"MAinActivity","Liste","denemeiki","denemeuc"};
+    String siniflarim[]={"MainActivity","List","denemeiki","denemeuc"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -33,7 +33,7 @@ public class Menu extends ListActivity {
 
         try {
             Class secilenClass= null;
-            secilenClass = Class.forName("com.example.fatmaok.beginning_001"+secilen);
+            secilenClass = Class.forName("com.example.fatmaok.beginning_001."+secilen);
             Intent intent=new Intent(this,secilenClass);
 
             startActivity(intent);
