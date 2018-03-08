@@ -12,7 +12,7 @@ import android.content.Intent;
  */
 
 public class Menu extends ListActivity {
-    String siniflarim[]={"MAinActivity","denemebir","denemeiki","denemeuc"};
+    String siniflarim[]={"MAinActivity","Liste","denemeiki","denemeuc"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
