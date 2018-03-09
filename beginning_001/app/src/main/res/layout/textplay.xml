@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical"
+    android:padding="25px">
+    
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Bir şey yazın"
+        android:gravity="center"
+        android:password="true"
+        android:textColor="@color/colorCrimson"
+        android:textColorHint="@color/colorCrimson"
+        android:id="@+id/etGirilenMetin" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gönder"
+        android:id="@+id/bGonder"
+        android:textColor="@color/colorDimGray"
+        android:layout_weight="40"/>
+    <ToggleButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tbDegistir"
+        android:checked="false"
+        android:textColor="@color/colorDimGray"
+        android:layout_weight="60"
+        />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDegistirilecekYazi"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:text="MELABAA!"
+        android:textColor="@color/colorCrimson"/>
+
+
+</LinearLayout>
