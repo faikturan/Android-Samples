@@ -28,16 +28,19 @@ public class List extends Activity {
         ulkelist=(ListView) findViewById(R.id.lv);
 
         ArrayAdapter<String> adapt=new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,android.R.id.text1,ulkeler);
+        //simple.... olan hazır kullanılmış list yapısıdır,ülkeler ayrı ayrı bir textviewdir,ulkeleri göstermek için onu en sona yazdık
         ulkelist.setAdapter(adapt);
 
         OnItemClickListener listener =new OnItemClickListener() {
+            //herbir item a tıklandığında neler olacağını burda işliyoruz
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
+                //herbirine tıklandığında bi alertdialog oluşcak
                 AlertDialog.Builder diyalogPencerem= new AlertDialog.Builder(List.this);
-                diyalogPencerem.setMessage(ulkeler[position]);
+                diyalogPencerem.setMessage(ulkeler[position]);//yazacağı mesaj
                 diyalogPencerem.setCancelable(false);
-                diyalogPencerem.setPositiveButton("Tamam", new OnClickListener() {
+                diyalogPencerem.setPositiveButton("Tamam", new android.content.DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
