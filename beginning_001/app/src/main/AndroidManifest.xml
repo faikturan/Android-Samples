@@ -33,7 +33,6 @@
             </intent-filter>
         </activity>
 
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAINACTIVITY" />
@@ -42,6 +41,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".Email">
+            <intent-filter>
+                <action android:name="android.intent.action.EMAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
 
         <activity android:name=".TextPlay">
