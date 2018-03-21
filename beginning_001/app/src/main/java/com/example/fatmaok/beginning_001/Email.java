@@ -8,8 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Email extends Activity implements OnClickListener {
+
+
 
     EditText aliciMailleri, mailKonusu,aliciAdlari,mail,kapanisSozu;
     String mailAdresleri,konu,alicilarinIsimleri,mailinKendisi,sonSoz;
@@ -29,6 +32,8 @@ public class Email extends Activity implements OnClickListener {
         aliciAdlari=(EditText)findViewById(R.id.etMailAliciAdi);
         mail=(EditText)findViewById(R.id.etMailMesaj);
         kapanisSozu=(EditText)findViewById(R.id.etMailKapanis);
+        gonder=(Button)findViewById(R.id.bGonder);
+        gonder.setOnClickListener(this);
     }
     private void editTextleriStringeCevirenMetod()
     {
@@ -40,6 +45,9 @@ public class Email extends Activity implements OnClickListener {
     }
     @Override
     public void onClick(View v) {
+
+        Toast.makeText(getApplicationContext(),"mail gonderiliyor...",Toast.LENGTH_SHORT).show();
+
         editTextleriStringeCevirenMetod();
 
         String mailAdresleriniTutanDizi[]={mailAdresleri};

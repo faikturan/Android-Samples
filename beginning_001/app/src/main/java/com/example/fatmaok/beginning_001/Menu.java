@@ -12,7 +12,7 @@ import android.content.Intent;
  */
 
 public class Menu extends ListActivity {
-    String siniflarim[]={"MainActivity","List","TextPlay","Email"};
+    String siniflarim[]={"MainActivity","List","TextPlay","Email","ResimCek"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -22,8 +22,6 @@ public class Menu extends ListActivity {
         setListAdapter(adaptorum);
         //adaptörle siniflarim dizisini listeye bağlamış olduk
     }
-
-
     @Override
     protected void onListItemClick(ListView l,View v,int position,long id)
     {//listedeki her item a tıklandığında yapılacak olan işlemler yer alır
@@ -41,9 +39,5 @@ public class Menu extends ListActivity {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
     }
-
-
-
 }
